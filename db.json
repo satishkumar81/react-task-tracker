@@ -2,18 +2,18 @@
   "tasks": [
     {
       "id": 3,
-      "text": "Doddi",
+      "text": "Jogging",
       "day": "Every day morning 6AM",
       "reminder": true
     },
     {
-      "text": "Peer",
+      "text": "Test1",
       "day": "Peet",
       "reminder": true,
       "id": 4
     },
     {
-      "text": "Arana",
+      "text": "Test2",
       "day": "Parana",
       "reminder": false,
       "id": 5
