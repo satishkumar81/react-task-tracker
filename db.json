@@ -1,0 +1,22 @@
+{
+  "tasks": [
+    {
+      "id": 3,
+      "text": "Doddi",
+      "day": "Every day morning 6AM",
+      "reminder": true
+    },
+    {
+      "text": "Peer",
+      "day": "Peet",
+      "reminder": true,
+      "id": 4
+    },
+    {
+      "text": "Arana",
+      "day": "Parana",
+      "reminder": false,
+      "id": 5
+    }
+  ]
+}
