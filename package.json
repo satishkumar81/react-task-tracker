@@ -12,6 +12,7 @@
     "react-icons": "^4.1.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
+    "serve": "^11.3.2",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
@@ -19,7 +20,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "json-server --watch db.json --port 5000"
+    "server": "json-server --watch db.json --port 5000",
+    "dev": "concurrently \"serve -s build -p 8000\" \"npm run server\""
   },
   "eslintConfig": {
     "extends": [
