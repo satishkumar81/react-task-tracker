@@ -53,6 +53,9 @@ jobs:
           region: us-central1
           credentials: ${{ secrets.GCLOUD_SERVICE_KEY }}
           env_vars: NAME="react-task-tracker"
+          metadata:
+            annotations:
+              run.googleapis.com/launch-stage: BETA
 
       #- id: Deploy
       #uses: GoogleCloudPlatform/github-actions/deploy-cloudrun@master
