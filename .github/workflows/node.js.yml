@@ -12,6 +12,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+          IMAGE_NAME: gcr.io/${{ secrets.GCP_PROJECT_ID }}/${{ secrets.GCP_APP_NAME }}
 
     strategy:
       matrix:
@@ -33,10 +35,14 @@ jobs:
       #registry: docker.io
       #username: ${{ secrets.DOCKER_USERNAME }}
       #password: ${{ secrets.DOCKER_PASSWORD }}
-      - name: build-and-push-to-gcr
+      
+      - name: build-and-push-image-to-gcr
         uses: RafikFarhad/push-to-gcr-github-action@v3.0.2
         with:
           gcloud_service_key: ${{ secrets.GCLOUD_SERVICE_KEY }}
           registry: gcr.io
-          project_id: soy-smile-301810
-          image_name: react-task-tracker
+          project_id: ${{ secrets.GCP_PROJECT_ID }}
+          image_name: $IMAGE_NAME
+      
+      - name: Deploy Container registry image
+          run: gcloud run deploy ${{ secrets.GCP_PROJECT_ID }} --image $IMAGE_NAME --region us-central1 --platform managed
