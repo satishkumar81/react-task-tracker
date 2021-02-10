@@ -45,5 +45,11 @@ jobs:
           project_id: soy-smile-301810
           image_name: react-task-tracker
 
-      - name: deploy-container-image-to-cloud-runner
-        run: gcloud run deploy $PROJECT_ID --image gcr.io/$PROJECT_ID/react-task-tracker --region us-central1 --platform managed
+      - id: Deploy
+        uses: GoogleCloudPlatform/github-actions/deploy-cloudrun@master
+        with:
+          credentials: ${{ secrets.GCLOUD_SERVICE_KEY }}
+          image: gcr.io/$PROJECT_ID/react-task-tracker
+          service: react-task-tracker
+      #- name: deploy-container-image-to-cloud-runner
+      # run: gcloud run deploy $PROJECT_ID --image gcr.io/$PROJECT_ID/react-task-tracker --region us-central1 --platform managed
