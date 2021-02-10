@@ -3,6 +3,7 @@ const app = express();
 const path = require('path');
 
 app.use('/', express.static(path.join(__dirname, 'build')));
+app.use('/api', jsonServer.router('db.json'));
 
 app.get('/', (req, res) => {
   //const name = process.env.NAME || 'World';
