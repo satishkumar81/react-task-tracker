@@ -46,5 +46,5 @@ jobs:
           project_id: ${{ secrets.GCP_PROJECT_ID }}
           image_name: react-task-tracker
 
-      - name: Deploy Container registry image
-        run: gcloud run deploy ${{ secrets.GCP_PROJECT_ID }} --image gcr.io/${{ secrets.GCP_PROJECT_ID }}/react-task-tracker:latest --region us-central1 --platform managed
+      - name: deploy-container-image-to-cloud-runner
+        run: gcloud run deploy ${{ secrets.GCP_PROJECT_ID }} --image gcr.io/${{ secrets.GCP_PROJECT_ID }}/react-task-tracker --region us-central1 --platform managed
