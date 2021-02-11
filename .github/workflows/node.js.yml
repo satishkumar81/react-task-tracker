@@ -46,7 +46,7 @@ jobs:
           image_name: react-task-tracker
 
       - name: Deploy to Cloud Run
-        uses: google-github-actions/deploy-cloudrun@v0.3.0
+        uses: google-github-actions/deploy-cloudrun@update-polling
         with:
           service: react-task-tracker
           image: gcr.io/soy-smile-301810/react-task-tracker
