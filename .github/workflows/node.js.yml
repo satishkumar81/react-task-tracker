@@ -26,8 +26,8 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - run: npm ci
-      - run: npm run build --if-present
+      #- run: npm ci
+      #- run: npm run build --if-present
 
       #- name: Build and Push Docker Image
       #uses: mr-smithers-excellent/docker-build-push@v4
@@ -51,7 +51,7 @@ jobs:
           service: react-task-tracker
           image: gcr.io/oy-smile-301810/react-task-tracker
           region: us-central1
-          credentials: ${{ secrets.GCLOUD_SERVICE_KEY }
+          credentials: ${{ secrets.GCLOUD_SERVICE_KEY }}
 
       #- id: Deploy
       #uses: GoogleCloudPlatform/github-actions/deploy-cloudrun@master
