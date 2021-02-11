@@ -48,10 +48,10 @@ jobs:
       - name: Deploy to Cloud Run
         uses: google-github-actions/deploy-cloudrun@v0.2.0
         with:
-        service: react-task-tracker
-        image: gcr.io/oy-smile-301810/react-task-tracker
-        region: us-central1
-        credentials: ${{ secrets.GCLOUD_SERVICE_KEY }
+          service: react-task-tracker
+          image: gcr.io/oy-smile-301810/react-task-tracker
+          region: us-central1
+          credentials: ${{ secrets.GCLOUD_SERVICE_KEY }
 
       #- id: Deploy
       #uses: GoogleCloudPlatform/github-actions/deploy-cloudrun@master
