@@ -51,9 +51,8 @@ jobs:
           service: react-task-tracker
           image: gcr.io/soy-smile-301810/react-task-tracker
           region: us-central1
-          credentials: ${{ secrets.GCLOUD_SERVICE_KEY }}
-          metadata:
-            BETA
+          credentials:
+            ${{ secrets.GCLOUD_SERVICE_KEY }}
             #run.googleapis.com/launch-stage: BETA
             #description:
             #run.googleapis.com/launch-stage: BETA
