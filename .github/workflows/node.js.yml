@@ -53,8 +53,9 @@ jobs:
           region: us-central1
           credentials: ${{ secrets.GCLOUD_SERVICE_KEY }}
           metadata:
-            description:
-              run.googleapis.com/launch-stage: BETA
+            run.googleapis.com/launch-stage: BETA
+            #description:
+            #run.googleapis.com/launch-stage: BETA
 
       #- id: Deploy
       #uses: GoogleCloudPlatform/github-actions/deploy-cloudrun@master
