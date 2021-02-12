@@ -9,7 +9,7 @@ const AddTask = ({ onAdd }) => {
     e.preventDefault();
 
     if (!text) {
-      alert('Enter atleast one task!!!');
+      alert('Enter atleast one task!');
       return;
     }
 
