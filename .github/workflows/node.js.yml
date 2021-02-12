@@ -53,7 +53,7 @@ jobs:
           region: us-central1
           credentials: ${{ secrets.GCLOUD_SERVICE_KEY }}
           metadata:
-            annotations:
+            description:
               run.googleapis.com/launch-stage: BETA
 
       #- id: Deploy
